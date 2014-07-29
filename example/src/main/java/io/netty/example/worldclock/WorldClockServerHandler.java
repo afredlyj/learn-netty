@@ -35,6 +35,7 @@ public class WorldClockServerHandler extends SimpleChannelInboundHandler<Locatio
     public void messageReceived(ChannelHandlerContext ctx, Locations locations) {
         long currentTime = System.currentTimeMillis();
 
+//        ctx.channel().
         LocalTimes.Builder builder = LocalTimes.newBuilder();
         for (Location l: locations.getLocationList()) {
             TimeZone tz = TimeZone.getTimeZone(

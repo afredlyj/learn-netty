@@ -442,6 +442,7 @@ public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C ext
         @Override
         public T newChannel() {
             try {
+
                 return clazz.newInstance();
             } catch (Throwable t) {
                 throw new ChannelException("Unable to create Channel from class " + clazz, t);
